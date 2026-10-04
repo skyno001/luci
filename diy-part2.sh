@@ -13,6 +13,9 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
 
+sed -i "s/timezone='GMT0'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
+sed -i "s/zonename='UTC'/zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
+
 # Modify default theme
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 #sed -i 's#"admin/status/bandwidth"#"admin/status/realtime/bandwidth"#g' feeds/luci/modules/luci-mod-status/root/usr/share/luci/menu.d/luci-mod-status.json
