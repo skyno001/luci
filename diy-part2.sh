@@ -15,13 +15,12 @@ sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generat
 
 sed -i 's#timezone='\''GMT0'\''#timezone='\''CST-8'\''#g' package/base-files/files/bin/config_generate
 sed -i 's#zonename='\''UTC'\''#zonename='\''Asia/Shanghai'\''#g' package/base-files/files/bin/config_generate
+
 #sed -i 's/\$(BOOTOPTS) \$(GRUB_CONSOLE_CMDLINE)/& microcode.force_minrev=0/' target/linux/x86/image/Makefile
+
 # Modify default theme
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 #sed -i 's#"admin/status/bandwidth"#"admin/status/realtime/bandwidth"#g' feeds/luci/modules/luci-mod-status/root/usr/share/luci/menu.d/luci-mod-status.json
-
-#sed -i 's/KERNEL_PATCHVER:=6.18/KERNEL_PATCHVER:=6.12/g' target/linux/x86/Makefile
-#sed -i 's/KERNEL_TESTING_PATCHVER:=6.12/KERNEL_TESTING_PATCHVER:=6.18/g' target/linux/x86/Makefile
 
 # Modify firewall
 #sed -i '118,131s/^/#/' package/network/config/firewall/files/firewall.config
