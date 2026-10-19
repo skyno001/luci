@@ -13,7 +13,7 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
 
-sed -i 's#timezone='\''UTC'\''#timezone='\''Asia/Shanghai'\''#g' package/base-files/files/bin/config_generate
+sed -i 's#timezone='\''UTC'\''#timezone='\''CST-8'\''#g' package/base-files/files/bin/config_generate
 #sed -i 's#zonename='\''UTC'\''#zonename='\''Asia/Shanghai'\''#g' package/base-files/files/bin/config_generate
 
 #sed -i 's/\$(BOOTOPTS) \$(GRUB_CONSOLE_CMDLINE)/& microcode.force_minrev=0/' target/linux/x86/image/Makefile
@@ -23,7 +23,7 @@ sed -i 's#timezone='\''UTC'\''#timezone='\''Asia/Shanghai'\''#g' package/base-fi
 #sed -i 's#"admin/status/bandwidth"#"admin/status/realtime/bandwidth"#g' feeds/luci/modules/luci-mod-status/root/usr/share/luci/menu.d/luci-mod-status.json
 
 # Modify firewall
-#sed -i '115,128s/^/#/' package/network/config/firewall/files/firewall.config
+sed -i '115,128s/^/#/' package/network/config/firewall/files/firewall.config
 
 # Modify hostname
 #sed -i 's/LEDE/OpenWrt/g' package/base-files/files/bin/config_generate
