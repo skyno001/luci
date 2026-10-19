@@ -23,7 +23,7 @@ sed -i 's#timezone='\''UTC'\''#timezone='\''Asia/Shanghai'\''#g' package/base-fi
 #sed -i 's#"admin/status/bandwidth"#"admin/status/realtime/bandwidth"#g' feeds/luci/modules/luci-mod-status/root/usr/share/luci/menu.d/luci-mod-status.json
 
 # Modify firewall
-#sed -i '118,131s/^/#/' package/network/config/firewall/files/firewall.config
+#sed -i '115,128s/^/#/' package/network/config/firewall/files/firewall.config
 
 # Modify hostname
 #sed -i 's/LEDE/OpenWrt/g' package/base-files/files/bin/config_generate
