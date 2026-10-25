@@ -13,10 +13,10 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
 
-#sed -i 's#timezone='\''GMT0'\''#timezone='\''CST-8'\''#g' package/base-files/files/bin/config_generate
-#sed -i 's#zonename='\''UTC'\''#zonename='\''Asia/Shanghai'\''#g' package/base-files/files/bin/config_generate
+sed -i 's#timezone='\''GMT0'\''#timezone='\''CST-8'\''#g' package/base-files/files/bin/config_generate
+sed -i 's#zonename='\''UTC'\''#zonename='\''Asia/Shanghai'\''#g' package/base-files/files/bin/config_generate
 
-sed -i 's#set system.@system\[-1\].timezone='\''UTC'\''#set system.@system[-1].timezone='\''CST-8'\''\n\t\tset system.@system[-1].zonename='\''Asia/Shanghai'\''#g' package/base-files/files/bin/config_generate
+#sed -i 's#set system.@system\[-1\].timezone='\''UTC'\''#set system.@system[-1].timezone='\''CST-8'\''\n\t\tset system.@system[-1].zonename='\''Asia/Shanghai'\''#g' package/base-files/files/bin/config_generate
 
 #sed -i 's/\$(BOOTOPTS) \$(GRUB_CONSOLE_CMDLINE)/& microcode.force_minrev=0/' target/linux/x86/image/Makefile
 
