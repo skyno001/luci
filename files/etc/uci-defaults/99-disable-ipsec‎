@@ -1,0 +1,17 @@
+#!/bin/sh
+
+i=$(uci show firewall | grep -c '^firewall.@rule\[')
+i=$((i - 1))
+
+while [ "$i" -ge 0 ]; do
+    case "$(uci -q get firewall.@rule[$i].name)" in
+        Allow-IPSec-ESP|Allow-ISAKMP)
+            uci -q delete firewall.@rule[$i]
+            ;;
+    esac
+    i=$((i - 1))
+done
+
+uci commit firewall
+
+exit 0
