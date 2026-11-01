@@ -18,8 +18,6 @@ sed -i 's#zonename='\''UTC'\''#zonename='\''Asia/Shanghai'\''#g' package/base-fi
 
 #sed -i 's#set system.@system\[-1\].timezone='\''UTC'\''#set system.@system[-1].timezone='\''CST-8'\''\n\t\tset system.@system[-1].zonename='\''Asia/Shanghai'\''#g' package/base-files/files/bin/config_generate
 
-sed -i 's/root:::0:99999:7:::/root:$1$V4UetPzk$tx9UhzAOyTGg2fwdqJqU21:0:0:99999:7:::/g' /etc/shadow
-
 # Modify default theme
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 #sed -i 's#"admin/status/bandwidth"#"admin/status/realtime/bandwidth"#g' feeds/luci/modules/luci-mod-status/root/usr/share/luci/menu.d/luci-mod-status.json
